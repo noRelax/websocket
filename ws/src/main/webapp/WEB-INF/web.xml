@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<!--   <servlet>
+		<servlet-name>CentralController</servlet-name>
+		<servlet-class>com.hfjy.framework.net.http.CentralController</servlet-class>
+		<init-param>
+			<param-name>controllerConfigClass</param-name>
+			<param-value>com.hfjy.job.base.ControllerInit</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CentralController</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping> -->
+
+  <!-- 项目初始化 -->
+  <listener>  
+    <listener-class>com.hfjy.ws.base.StartInit</listener-class>  
+  </listener> 
+  
+  <!-- 自定义标签 --> 
+  <!-- <jsp-config>
+    <taglib>
+      <taglib-uri>/taglibs/htld</taglib-uri>
+      <taglib-location>/WEB-INF/taglibs/htld.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+  
+  访问权限过滤器，过滤所有请求 
+  <filter>
+    <filter-name>PrivilegeFilter</filter-name>
+    <filter-class>com.hfjy.job.filter.PrivilegeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PrivilegeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+  
+ 
+  <!-- error-page --> 
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location> 
+  </error-page>
+  <!-- 设置session过期时间 -->
+  <session-config>  
+  	<session-timeout>120</session-timeout>  
+  </session-config>
+  
+</web-app>
